@@ -13,8 +13,8 @@ class MainViewModel @Inject constructor(private val repository: GithubRepository
     val userListState = MutableLiveData<UserListState>()
     var page = 1
         private set
-    private val perPage = 15
-    private var hasReachedMax = false
+    val perPage = 15
+    var hasReachedMax = false
 
     fun refreshUsers(query: String) {
         hasReachedMax = false
