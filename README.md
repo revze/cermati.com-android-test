@@ -12,5 +12,5 @@ Github User List is an app to search user in Github. Develop using Kotlin and MV
 - [Mockito](https://github.com/mockito/mockito)
 
 ## Todo
-[x] Implement search user with pagination
-[x] Implement unit testing
+- Implement search user with pagination
+- Implement unit testing
