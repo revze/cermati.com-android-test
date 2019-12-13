@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Github User List</string>
+    <string name="general_error_message">Oops, something went wrong..</string>
+    <string name="no_internet_error_message">Oops, no internet connection..</string>
+    <string name="users_not_found_message">Oops, users not found..</string>
+</resources>
