@@ -163,8 +163,6 @@ class MainViewModelTest {
         SUT.getNextUsers(KEYWORD)
 
         // Assert
-        argumentCaptor.run {
-            verify(repository, never()).searchUser(anyString(), anyInt(), anyInt())
-        }
+        verify(repository, never()).searchUser(anyString(), anyInt(), anyInt())
     }
 }
