@@ -10,14 +10,16 @@ import javax.inject.Inject
 
 class GithubRepositoryImpl @Inject constructor(private val apiServices: ApiServices) :
     GithubRepository {
-    override suspend fun getUsers(query: String, page: Int, perPage: Int): Output<List<User>> {
+    override suspend fun searchUser(query: String, page: Int, perPage: Int): Output<List<User>> {
         return try {
-            val result = apiServices.getUsers(query, page, perPage)
+            val result = apiServices.searchUser(query, page, perPage)
             Output.Success(result.items)
         } catch (e: HttpException) {
             Output.Error(StatusCode.GENERAL_ERROR)
         } catch (e: IOException) {
             Output.Error(StatusCode.NETWORK_ERROR)
+        } catch (e: Exception) {
+            Output.Error(StatusCode.GENERAL_ERROR)
         }
     }
 }

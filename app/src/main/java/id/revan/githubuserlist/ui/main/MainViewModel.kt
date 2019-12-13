@@ -26,7 +26,7 @@ class MainViewModel @Inject constructor(private val repository: GithubRepository
         if (!hasReachedMax) {
             userListState.value = UserListState(isLoading = true)
             viewModelScope.launch {
-                val result = repository.getUsers(query, page, perPage)
+                val result = repository.searchUser(query, page, perPage)
 
                 when (result) {
                     is Output.Success -> {
